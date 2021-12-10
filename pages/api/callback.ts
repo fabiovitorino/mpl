@@ -2,7 +2,7 @@ import {NextApiRequest, NextApiResponse} from 'next';
 
 async function callback(req:NextApiRequest, res:NextApiResponse) {
   try {
-    const apiSecret = "eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiJtYXJjdXMuYW50b25pbyIsImlzcyI6ImNzd1NlcnZlciIsImlhdCI6MTYzNTcxNTI3MiwiYXVkIjoiY3N3VmlldyIsImNzd1Rva2VuIjoiM3RPb25xS2lGZjNtcWFPRVB4azlJdyIsImRiTmFtZVNwYWNlIjoic2lzdGVtYXMifQ.ZC_NZyXxeylFJIDPXBZpCt-4Do-PDsTNvqjudcksWfe6Tcyn7mI_HxSaURdpvcAgVdkYgJy9YftaBWjNnlKTWg"
+    const apiSecret = "eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiJldXplYmlvLmFsdmVzIiwiaXNzIjoiY3N3U2VydmVyIiwiaWF0IjoxNjE4MzIwOTYyLCJhdWQiOiJjc3dWaWV3IiwiY3N3VG9rZW4iOiI1eHN2VVJhdGF4MDRjYjcxVmtLVTVRIiwiZGJOYW1lU3BhY2UiOiJzaXN0ZW1hcyJ9.DM521Keo5VokCAt1Xwqcnzx_e2DH_Sozp6gQYfcTkychN4fstu2oM8KwSzJIJFGIgRByd7Wryq1SGI4fslFAuQ"
     
     const {method, query, body} = req;
     
@@ -11,7 +11,7 @@ async function callback(req:NextApiRequest, res:NextApiResponse) {
       "content":body.content
     }
 
-    const url = 'http://csw.grupompl.com.br:7256/api/custom/v10/callbackanymarket?' + 'empresa=' + query.empresa; 
+    const url = 'http://csw.grupompl.com.br:5556/api/custom/v10/callbackanymarket?' + 'empresa=' + query.empresa; 
 
     const clienteResponse = fetch(url, {
       method: 'PUT',
